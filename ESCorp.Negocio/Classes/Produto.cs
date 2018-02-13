@@ -1,12 +1,22 @@
-﻿using System.Security.Permissions;
+﻿using ESCorp.Comum;
 using ESCorp.Negocio.Classes;
 
 namespace ESCorp.Negocio
 {
     public class Produto : EntidadeBase
     {
+        
         public int IdProduto { get; private set; }
-        public string Nome { get; set; }
+        private string _nome;
+        public string Nome
+        {
+            get
+            {                
+                return StringUtil.InserirEspacos(_nome);
+            }
+            set { _nome = value; }
+        }
+
         public decimal? Preco { get; set; }
         public string Descricao { get; set; }
 
@@ -37,5 +47,6 @@ namespace ESCorp.Negocio
         {
             return Nome;
         }
+
     }
 }

@@ -1,3 +1,17 @@
+
+Padrão Método de Teste
+
+[Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute]
+public void $Metodo$_$Condicao$_$ResultadoEsperado$()
+{
+    //Arrange
+
+    //Act
+
+    //Assert
+}
+
+
 Relacionamentos
 
 Colaboração - Usa um
@@ -28,6 +42,23 @@ Command Query Separation - um método pode ser um comando ou uma query, mas nunca
 	Query - retorna um resultado sem alterar o estado do objeto, é um funçao livres de efeitos colaterais.
 
 Construindo Componentes Reutilizáveis
+
+Classes Estáticas
+	Utilize qdo a classe não precisar gerenciar estado (têm propriedades)
+	Dificilmente aparecerão na camada de negócio, já que essas gerenciam estado
+
+
+Métodos de Extensão
+	É necessário inserir o this antes do parâmetro
+public static class SringUtil
+{
+	public static string InserirEspacos (this string palavra) 
+}
+
+Interface: é um fronteira comum em que dois componentes separados de um sistema trocam informações.
+
+
+
 
 
 
