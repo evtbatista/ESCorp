@@ -1,0 +1,33 @@
+Relacionamentos
+
+Colaboração - Usa um
+	ClienteRepositorio -(Usa um)-> Cliente
+
+Composição - Tem um
+	Pedido -(Tem um)-> Endereço
+
+Herança - É um
+	Residencial -(é um)-> Cliente
+	Governamental -(é um)-> Cliente
+
+Entre Herança e Composição é sempre indicado utilizar a Composição
+
+SRP - Single Resposibility Principle
+	Uma classe deve ter somente uma razão para mudar.
+
+OCP - Open Closed Principle
+	As classes devem ser abertas para extensão, mas fechadas para modificação.
+	Quando eu precisar estender o comportamento de um código, eu crio uma nova classe ao invés de alterar 
+	o código existente.
+
+LSP - Liskov Substitution Principle
+	Classes derivadas devem poder ser substiuídas por suas classes base.	
+
+Command Query Separation - um método pode ser um comando ou uma query, mas nunca ambos.
+	Command - altera o estado do objeto e não retorna valor.
+	Query - retorna um resultado sem alterar o estado do objeto, é um funçao livres de efeitos colaterais.
+
+Construindo Componentes Reutilizáveis
+
+
+

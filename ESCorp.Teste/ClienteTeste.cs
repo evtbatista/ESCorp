@@ -66,5 +66,45 @@ namespace ESCorp.Teste
             //Assert
             Assert.AreEqual(resultadoEsperado, resultadoAtual);
         }
+
+        [TestMethod]
+        public void Validar_QuandoOObjetoForValido_DeveRetornarVerdadeiro()
+        {
+            //Arrange
+            //var cliente = new Cliente
+            //{
+            //    Sobrenome = "Batista",
+            //    Email = "everton.batista@tgs.com"
+            //};
+
+            var cliente = new Cliente(1, "Batista", "everton.batista@tgs.com");
+
+            var resultadoEsperado = true;
+
+            //Act
+            var atual = cliente.Validar();
+
+            //Assert
+            Assert.AreEqual(resultadoEsperado, atual);
+        }
+
+        [TestMethod]
+        public void Validar_QuandoOObjetoForInvalido_DeveRetornarFalso()
+        {
+            //Arrange
+            var cliente = new Cliente
+            {
+                Sobrenome = "",
+                Email = "everton.batista@tgs.com"
+            };
+
+            var resultadoEsperado = false;
+
+            //Act
+            var atual = cliente.Validar();
+
+            //Assert
+            Assert.AreEqual(resultadoEsperado, atual);
+        }
     }
 }
