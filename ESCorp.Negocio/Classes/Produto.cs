@@ -3,7 +3,7 @@ using ESCorp.Negocio.Classes;
 
 namespace ESCorp.Negocio
 {
-    public class Produto : EntidadeBase
+    public class Produto : EntidadeBase, ILog
     {
         
         public int IdProduto { get; private set; }
@@ -46,6 +46,17 @@ namespace ESCorp.Negocio
         public override string ToString()
         {
             return Nome;
+        }
+
+
+        public string Log()
+        {
+            var informacao = IdProduto + ": " +
+                             Nome + " " +
+                             "Detalhe: " + Descricao + " " +
+                             "Status: " + EstadoEntidade;
+
+            return informacao;
         }
 
     }

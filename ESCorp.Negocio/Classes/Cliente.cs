@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using ESCorp.Comum;
 using ESCorp.Negocio.Classes;
 using ESCorp.Negocio.Enumeradores;
 
 namespace ESCorp.Negocio
 {
-    public class Cliente : EntidadeBase
+    public class Cliente : EntidadeBase, ILog
     {
         #region Declarações
 
@@ -78,6 +79,16 @@ namespace ESCorp.Negocio
         public override string ToString()
         {
             return NomeCompleto;
+        }
+
+        public string Log()
+        {
+            var informacao = IdCliente + ": " +
+                             NomeCompleto + " " +
+                             "Email: " + Email + " " +
+                             "Status: " + EstadoEntidade;
+
+            return informacao;
         }
 
         #endregion

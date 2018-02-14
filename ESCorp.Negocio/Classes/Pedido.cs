@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using ESCorp.Comum;
 using ESCorp.Negocio.Classes;
 using ESCorp.Negocio.Enumeradores;
 
 namespace ESCorp.Negocio
 {
-    public class Pedido : EntidadeBase
+    public class Pedido : EntidadeBase, ILog
     {
         public int IdPedido { get; set; }
         public int IdCliente { get; set; }
@@ -78,6 +79,15 @@ namespace ESCorp.Negocio
         public override string ToString()
         {
             return Data + " (" + IdPedido + ")";
+        }
+
+        public string Log()
+        {
+            var informacao = IdPedido + ": " +                 
+                 "Data: " + Data.Value.Date + " " +
+                 "Status: " + EstadoEntidade;
+
+            return informacao;
         }
     }
 }

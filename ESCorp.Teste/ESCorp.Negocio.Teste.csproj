@@ -59,6 +59,10 @@
     <Compile Include="Telefone.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ESCorp.Comum\ESCorp.Comum.csproj">
+      <Project>{011e79da-1cbf-4471-9ee5-3ef5597d7ab1}</Project>
+      <Name>ESCorp.Comum</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ESCorp.Negocio\ESCorp.Negocio.csproj">
       <Project>{b815263c-27f8-4d72-bfa4-7b5b4c43fd2f}</Project>
       <Name>ESCorp.Negocio</Name>
