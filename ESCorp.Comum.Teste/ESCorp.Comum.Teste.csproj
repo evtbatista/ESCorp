@@ -52,6 +52,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="MensagemEmailFake.cs" />
+    <Compile Include="ServicoCancelamentoPedidoTeste.cs" />
     <Compile Include="ServicoLogTeste.cs" />
     <Compile Include="StringUtilTeste.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

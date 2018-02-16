@@ -47,6 +47,7 @@
     <Compile Include="Classes\Pedido.cs" />
     <Compile Include="Classes\Produto.cs" />
     <Compile Include="Classes\RegraCalculo.cs" />
+    <Compile Include="Classes\ServicoCancelamentoPedido.cs" />
     <Compile Include="Classes\ServicoLog.cs" />
     <Compile Include="DTO\ItemPedidoDto.cs" />
     <Compile Include="DTO\PedidoDto.cs" />

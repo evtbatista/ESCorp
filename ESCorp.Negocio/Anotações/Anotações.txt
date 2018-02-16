@@ -59,6 +59,14 @@ Interface: é um fronteira comum em que dois componentes separados de um sistema 
 
 Polimorfismo de Interface
 
+Princípio da Inversão de Dependência (DIP) 
+	Módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender de abstrações.
+	Abstrações não devem depender de detalhes.
+	Detalhes devem depender de abstrações.
+
+Princípio de Segregação de Interface 
+	Clientes não devem ser forçados a depender de métodos que não usam.
+	Prefira interfaces "magras" e com maior coesão
 
 
 

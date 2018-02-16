@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Mail;
 using ESCorp.Comum;
 using ESCorp.Negocio.Classes;
 using ESCorp.Negocio.Enumeradores;
@@ -38,9 +39,8 @@ namespace ESCorp.Negocio
         {
             if (Entregue)
                 throw new ArgumentNullException("Pedido entrege não pode ser cancelado!");
-                
-            if (Entregue == false)            
-                Cancelado = true;                        
+                                   
+            Cancelado = true;
         }
 
         public decimal CalcularValorTotal()
